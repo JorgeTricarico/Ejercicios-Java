@@ -18,7 +18,8 @@ public class LavarropaServicio extends ElectrodomesticoServicio {
     protected ArrayList<Lavarropa> listaLavarropas = new ArrayList();
 
     public LavarropaServicio() {
-        crearElectrodomestico();
+        
+         //crearElectrodomestico();
     }
     
 //    @Override
@@ -61,7 +62,8 @@ public class LavarropaServicio extends ElectrodomesticoServicio {
         Lavarropa L1 = new Lavarropa();
         listaLavarropas.add(L1);
         
-    
+        crearElectrodomestico();
+        
         System.out.println("Ingrese la CARGA del Lavarropas");
         L1.setCarga(leer.nextInt());
         

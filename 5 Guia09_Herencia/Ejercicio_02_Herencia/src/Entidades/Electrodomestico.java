@@ -5,10 +5,6 @@
  */
 package Entidades;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.jar.Attributes;
-
 /**
  *
  * @author Notebook
@@ -66,10 +62,10 @@ public abstract class Electrodomestico {
         this.peso = peso;
     }
 
-//    @Override
-//    public String toString() {
-//        return "" + "precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso;
-//    }
+    @Override
+    public String toString() {
+        return "" + "precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso;
+    }
 
     
     

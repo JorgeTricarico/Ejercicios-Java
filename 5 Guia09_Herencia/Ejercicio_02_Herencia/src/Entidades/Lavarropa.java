@@ -72,11 +72,13 @@ public class Lavarropa extends Electrodomestico {
     public void setPeso(Integer peso) {
         this.peso = peso;
     }
-//
-//    @Override
-//    public String toString() {
-//        return super.toString();
-//    }
+
+    @Override
+    public String toString() {
+        return "Lavarropa{" + "carga=" + carga + '}';
+    }
+
+    
 
     
     

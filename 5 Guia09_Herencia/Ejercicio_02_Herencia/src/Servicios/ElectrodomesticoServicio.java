@@ -6,9 +6,7 @@
 package Servicios;
 
 import Entidades.Electrodomestico;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -55,7 +53,7 @@ public class ElectrodomesticoServicio {
         System.out.println("Ingrse el PESO del electrodomestico:");
         Integer peso = leer.nextInt();
         e1.setPeso(peso);
-        
+       
     
         
          
