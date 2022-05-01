@@ -17,6 +17,14 @@ public class Ejercicio6_Guia1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
+        /*
+        6.  Implementar un programa que dado dos números enteros determine cuál es el 
+        mayor y lo muestre por pantalla. 
+
+        */
+        
          System.out.println("Ingrese un numero entero");
          Scanner leer = new Scanner(System.in);
          int numero1 = leer.nextInt();

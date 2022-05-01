@@ -7,11 +7,10 @@ package ejercicio1_guia1_java;
 
 import java.util.Scanner;
 
-
-/**
- *
- * @author Notebook
- */
+//<*****************************************>
+//Escribir un programa que pida dos números enteros por teclado y calcule la suma 
+//de los dos. El programa deberá después mostrar el resultado de la suma.
+//<*****************************************>
 public class Ejercicio1_Guia1_Java {
 
     /**

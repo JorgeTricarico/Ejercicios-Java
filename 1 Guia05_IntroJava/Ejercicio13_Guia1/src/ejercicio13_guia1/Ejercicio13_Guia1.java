@@ -13,8 +13,10 @@ import java.util.Scanner;
  */
 public class Ejercicio13_Guia1 {
 
-    /**
-     * @param args the command line arguments
+    /*
+     13. Escriba un programa en el cual se ingrese un valor límite positivo, y a continuación 
+    solicite números al usuario hasta que la suma de los números introducidos supere el 
+    límite inicial.
      */
     public static void main(String[] args) {
      System.out.println("Ingrese el valor limite de la suma de numeros.");

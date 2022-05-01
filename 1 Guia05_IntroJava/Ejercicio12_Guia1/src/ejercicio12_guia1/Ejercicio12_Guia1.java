@@ -16,7 +16,13 @@ public class Ejercicio12_Guia1 {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
+        
+        /*
+        12. Escriba un programa que valide si una nota está entre 0 y 10, sino está entre 0 y 10 
+        la nota se pedirá de nuevo hasta que la nota sea correcta.
+        */
         
         int n;
         Scanner leer = new Scanner(System.in);

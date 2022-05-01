@@ -18,6 +18,14 @@ public class Ejercicio5_Guia1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        /*
+         Escribir un programa que lea un número entero por teclado y muestre por pantalla 
+        el doble, el triple y la raíz cuadrada de ese número. Nota: investigar la función 
+        Math.sqrt(). 
+        */
+        
+        
        System.out.println("Ingrese un numero entero!");
        Scanner leer = new Scanner(System.in);
        int numero = leer.nextInt();

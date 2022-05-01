@@ -15,9 +15,12 @@ import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
  */
 public class Ejercicio3_Guia1 {
 
-    /**
-     * @param args the command line arguments
-     */
+    //<*****************************************>
+    //     Escribir un programa que pida una frase y la muestre toda en mayúsculas y 
+    //    después toda en minúsculas. Nota: investigar la función toUpperCase() y 
+    //    toLowerCase() en Java. 
+
+    //<*****************************************>
     public static void main(String[] args) {
         System.out.println("Ingrese una frase");
         Scanner leer = new Scanner(System.in);
