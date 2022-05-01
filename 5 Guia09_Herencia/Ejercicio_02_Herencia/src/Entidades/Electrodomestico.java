@@ -16,6 +16,8 @@ public abstract class Electrodomestico {
     protected char consumoElectrico;
     protected Integer peso;
     
+    protected String tipo;
+    
     
     
     public Electrodomestico() {
@@ -62,9 +64,19 @@ public abstract class Electrodomestico {
         this.peso = peso;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    
+
     @Override
     public String toString() {
-        return "" + "precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso;
+        return "tipo ="+ tipo + ", precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso;
     }
 
     

@@ -19,7 +19,7 @@ public class LavarropaServicio extends ElectrodomesticoServicio {
 
     public LavarropaServicio() {
         
-         //crearElectrodomestico();
+//         crearElectrodomestico();
     }
     
 //    @Override
