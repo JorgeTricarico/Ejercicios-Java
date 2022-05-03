@@ -9,14 +9,15 @@ package Entidades;
  *
  * @author Notebook
  */
-public abstract class Electrodomestico {
+public  class Electrodomestico {
     
     protected Integer precio;
     protected String color;
     protected char consumoElectrico;
     protected Integer peso;
     
-    protected String tipo;
+//    protected String tipo;
+    
     
     
     
@@ -64,22 +65,15 @@ public abstract class Electrodomestico {
         this.peso = peso;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    
-
     @Override
     public String toString() {
-        return "tipo ="+ tipo + ", precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso;
+        return "Electrodomestico{" + '}';
     }
 
     
+
+   
+
     
    
 }

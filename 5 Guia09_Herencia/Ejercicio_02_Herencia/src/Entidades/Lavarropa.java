@@ -73,15 +73,15 @@ public class Lavarropa extends Electrodomestico {
         this.peso = peso;
     }
 
-    @Override
-    public String toString() {
-        return "carga=" + carga + '}';
-    }
-
 //    @Override
 //    public String toString() {
-//        return "" + "precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso;
+//        return "carga=" + carga + '}';
 //    }
+
+    @Override
+    public String toString() {
+        return "Lavarropas" +'{' + "precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso+'}';
+    }
 
     
     

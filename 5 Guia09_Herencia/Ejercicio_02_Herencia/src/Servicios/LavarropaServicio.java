@@ -8,6 +8,7 @@ package Servicios;
 import Entidades.Electrodomestico;
 import Entidades.Lavarropa;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -16,68 +17,44 @@ import java.util.ArrayList;
 public class LavarropaServicio extends ElectrodomesticoServicio {
     
     protected ArrayList<Lavarropa> listaLavarropas = new ArrayList();
-
+    
     public LavarropaServicio() {
         
 //         crearElectrodomestico();
     }
     
-//    @Override
-//    public String toString() {
-//        return super.toString(); 
-//    }
 
-    @Override
-    public void comprobarColor(Electrodomestico e1) {
-        super.comprobarColor(e1); 
-    }
-
-    @Override
-    public void comprobarConsumoEnergetico(Electrodomestico e1) {
-        super.comprobarConsumoEnergetico(e1); 
-    }
-
-    @Override
-    public void calcularPrecioPorPeso(Electrodomestico e1) {
-        super.calcularPrecioPorPeso(e1); 
-    }
-
-    @Override
-    public void calcularPrecioPorLetra(Electrodomestico e1) {
-        super.calcularPrecioPorLetra(e1); 
-    }
-
-    @Override
-    public void precioFinal(Electrodomestico e1) {
+    public void precioFinal(Electrodomestico e1, Lavarropa L1) {
         super.precioFinal(e1);
-        if (e1.getPrecio()>30) {
+        if (L1.getCarga()>30) {
             e1.setPrecio(e1.getPrecio()+500);
         }
     }
-
     
-    
-    
-    public Lavarropa crearLavarropa(){
-        Lavarropa L1 = new Lavarropa();
+    public Lavarropa crearLavarropa(ElectrodomesticoServicio s1){
+        
+        Electrodomestico e1 = super.crearElectrodomestico();
+        
+        System.out.println("Ingrese la carga");
+        Integer carga = leer.nextInt();
+        
+        Lavarropa L1 = new Lavarropa(carga, e1.getPrecio(), e1.getColor(), e1.getConsumoElectrico(), e1.getPeso());
         listaLavarropas.add(L1);
-        
-        crearElectrodomestico();
-        
-        System.out.println("Ingrese la CARGA del Lavarropas");
-        L1.setCarga(leer.nextInt());
-        
-        listaElectrodomesticos.add(L1);
-        
+        listaElectrodomesticos.add(listaLavarropas);
+        s1.setListaElectrodomesticos(listaElectrodomesticos);
+        System.out.println("Prueba: " + listaElectrodomesticos.size());
         return L1;
     }
+    
+    
 
     @Override
     public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+        return "LavarropaServicio{" + "listaLavarropas=" + listaLavarropas + '}';
     }
 
     
+   
     
    
     

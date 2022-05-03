@@ -6,7 +6,10 @@
 package Servicios;
 
 import Entidades.Electrodomestico;
+import Entidades.Lavarropa;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -19,14 +22,25 @@ public class ElectrodomesticoServicio {
         this.leer = new Scanner(System.in).useDelimiter("\n");
     }
 
-    protected ArrayList<Electrodomestico> listaElectrodomesticos = new ArrayList();
+    protected List<List> listaElectrodomesticos = new ArrayList<>();
+
+    public List<List> getListaElectrodomesticos() {
+        return listaElectrodomesticos;
+    }
+
+    public void setListaElectrodomesticos(List<List> listaElectrodomesticos) {
+        this.listaElectrodomesticos = listaElectrodomesticos;
+    }
+    
+    
+    
     protected ArrayList colores = new ArrayList();
     protected ArrayList letrasConsumo = new ArrayList();
     protected Scanner leer;
     
-    public void crearElectrodomestico() {
+    public Electrodomestico crearElectrodomestico() {
         
-        Electrodomestico e1 = new Electrodomestico() {};
+        Electrodomestico e1 = new Electrodomestico();
         
         // Letras segun consumo
         letrasConsumo.add('A');
@@ -43,9 +57,9 @@ public class ElectrodomesticoServicio {
         colores.add("azul");
         colores.add("gris");
         
-        System.out.println("Ingrese el tipo de electrodomestico. Ej. TV, DVD, Lavarropas, ect.");
-        String tipo = leer.next().toUpperCase();
-        e1.setTipo(tipo);
+//        System.out.println("Ingrese el tipo de electrodomestico. Ej. TV, DVD, Lavarropas, ect.");
+//        String tipo = leer.next().toLowerCase();
+//        e1.setTipo(tipo);
         System.out.println("Ingrese el COLOR del electrodomestico: \n -Blanco \n -Negro \n -Rojo \n -Azul \n -Gris \n");
         String color = leer.next().toLowerCase();
         
@@ -57,23 +71,17 @@ public class ElectrodomesticoServicio {
         System.out.println("Ingrse el PESO del electrodomestico:");
         Integer peso = leer.nextInt();
         e1.setPeso(peso);
-       
-    
-        
-         
+
         comprobarColor(e1);
         comprobarConsumoEnergetico(e1);
         
-        listaElectrodomesticos.add(e1);
-        
-        
+        return e1;
     }
     
     public void precioFinal(Electrodomestico e1){
-        
-        
-        calcularPrecioPorLetra(e1);
-        calcularPrecioPorPeso(e1);
+       
+//        calcularPrecioPorLetra(e1);
+        e1.setPrecio(calcularPrecioPorPeso(e1.getPeso()));
     
     }
         
@@ -111,24 +119,19 @@ public class ElectrodomesticoServicio {
         
     }
     
-    public void calcularPrecioPorPeso(Electrodomestico e1){
+    public Integer calcularPrecioPorPeso(Integer peso){
     
-        if (e1.getPrecio()>=1 && e1.getPrecio()<=19) {
-            e1.setPrecio(e1.getPrecio()+100);
+        if (peso>=1 && peso<=19) {
+            return (peso+100);
             
-        }else     
-        if (e1.getPrecio()>=20 && e1.getPrecio()<=49) {
-            e1.setPrecio(e1.getPrecio()+500);
-        }else
-        
-        if (e1.getPrecio()>=50 && e1.getPrecio()<=79) {
-            e1.setPrecio(e1.getPrecio()+800);
-        }else
-        
-        if (e1.getPrecio()>=80) {
-            e1.setPrecio(e1.getPrecio()+1000);
+        }else if (peso>=20 && peso<=49) {
+            return (peso+500);
+        }else if (peso>=50 && peso<=79) {
+            return (peso+800);
+        }else if (peso>=80) {
+            return (peso+1000);
         } 
-        
+        return 9999999;
     }
     
     public void comprobarConsumoEnergetico(Electrodomestico e1){
@@ -147,6 +150,7 @@ public class ElectrodomesticoServicio {
         
     }
 
+    
     
     @Override
     public String toString() {
