@@ -24,7 +24,7 @@ public class Main {
 
         
         LS1.crearLavarropa(se1);
-        LS1.crearLavarropa(se1);
+        
 //        LS1.asd(se1);
 //        System.out.println(se1.getListaElectrodomesticos());
             System.out.println(se1.toString());

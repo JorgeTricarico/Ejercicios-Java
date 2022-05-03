@@ -27,7 +27,9 @@ public class LavarropaServicio extends ElectrodomesticoServicio {
     public void precioFinal(Electrodomestico e1, Lavarropa L1) {
         super.precioFinal(e1);
         if (L1.getCarga()>30) {
-            e1.setPrecio(e1.getPrecio()+500);
+            L1.setPrecio(e1.getPrecio()+500);
+        }else {
+            L1.setPrecio(e1.getPrecio());
         }
     }
     
@@ -38,7 +40,12 @@ public class LavarropaServicio extends ElectrodomesticoServicio {
         System.out.println("Ingrese la carga");
         Integer carga = leer.nextInt();
         
-        Lavarropa L1 = new Lavarropa(carga, e1.getPrecio(), e1.getColor(), e1.getConsumoElectrico(), e1.getPeso());
+        
+        
+        Lavarropa L1 = new Lavarropa(carga, 0, e1.getColor(), e1.getConsumoElectrico(), e1.getPeso());
+        
+        precioFinal(e1, L1);
+        
         listaLavarropas.add(L1);
         listaElectrodomesticos.add(listaLavarropas);
         s1.setListaElectrodomesticos(listaElectrodomesticos);

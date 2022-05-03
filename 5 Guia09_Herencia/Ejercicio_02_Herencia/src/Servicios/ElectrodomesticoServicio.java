@@ -75,12 +75,14 @@ public class ElectrodomesticoServicio {
         comprobarColor(e1);
         comprobarConsumoEnergetico(e1);
         
+        e1.setPrecio(0);
+        
         return e1;
     }
     
     public void precioFinal(Electrodomestico e1){
        
-//        calcularPrecioPorLetra(e1);
+        calcularPrecioPorLetra(e1);
         e1.setPrecio(calcularPrecioPorPeso(e1.getPeso()));
     
     }
