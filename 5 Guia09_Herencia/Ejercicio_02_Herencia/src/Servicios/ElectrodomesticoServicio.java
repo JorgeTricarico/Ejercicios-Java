@@ -6,9 +6,9 @@
 package Servicios;
 
 import Entidades.Electrodomestico;
-import Entidades.Lavarropa;
+
 import java.util.ArrayList;
-import java.util.HashSet;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -121,7 +121,7 @@ public class ElectrodomesticoServicio {
         
     }
     
-    public Integer calcularPrecioPorPeso(Integer peso){
+    public double calcularPrecioPorPeso(double peso){
     
         if (peso>=1 && peso<=19) {
             return (peso+100);

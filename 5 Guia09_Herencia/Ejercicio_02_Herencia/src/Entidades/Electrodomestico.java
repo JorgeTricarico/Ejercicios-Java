@@ -11,10 +11,10 @@ package Entidades;
  */
 public  class Electrodomestico {
     
-    protected Integer precio;
+    protected double precio;
     protected String color;
     protected char consumoElectrico;
-    protected Integer peso;
+    protected double peso;
     
 //    protected String tipo;
     
@@ -25,7 +25,7 @@ public  class Electrodomestico {
         
     }
 
-    public Electrodomestico(Integer precio, String color, char consumoElectrico, Integer peso) {
+    public Electrodomestico(double precio, String color, char consumoElectrico, double peso) {
         this.precio = precio;
         this.color = color;
         this.consumoElectrico = consumoElectrico;
@@ -33,11 +33,11 @@ public  class Electrodomestico {
         
     }
 
-    public Integer getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Integer precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
@@ -57,11 +57,11 @@ public  class Electrodomestico {
         this.consumoElectrico = consumoElectrico;
     }
 
-    public Integer getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(Integer peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 

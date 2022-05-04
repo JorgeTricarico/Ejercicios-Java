@@ -9,28 +9,35 @@ package Entidades;
  *
  * @author Notebook
  */
-public class Lavarropa extends Electrodomestico {
-    protected Integer carga;
+public class Televisor extends Electrodomestico{
     
-    public Lavarropa(){
-        
+    protected Integer pulgadas;
+    
+    protected boolean sintonizadorTDT;
+
+    public Televisor() {
     }
 
-    public Lavarropa(Integer carga) {
-        this.carga = carga;
-    }
-
-    public Lavarropa(Integer carga, double precio, String color, char consumoElectrico, double peso) {
+    public Televisor(Integer pulgadas, boolean sintonizadorTDT, double precio, String color, char consumoElectrico, double peso) {
         super(precio, color, consumoElectrico, peso);
-        this.carga = carga;
+        this.pulgadas = pulgadas;
+        this.sintonizadorTDT = sintonizadorTDT;
     }
 
-    public Integer getCarga() {
-        return carga;
+    public Integer getPulgadas() {
+        return pulgadas;
     }
 
-    public void setCarga(Integer carga) {
-        this.carga = carga;
+    public void setPulgadas(Integer pulgadas) {
+        this.pulgadas = pulgadas;
+    }
+
+    public boolean isSintonizadorTDT() {
+        return sintonizadorTDT;
+    }
+
+    public void setSintonizadorTDT(boolean sintonizadorTDT) {
+        this.sintonizadorTDT = sintonizadorTDT;
     }
 
     @Override
@@ -72,21 +79,7 @@ public class Lavarropa extends Electrodomestico {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-
-//    @Override
-//    public String toString() {
-//        return "carga=" + carga + '}';
-//    }
-
-    @Override
-    public String toString() {
-        return "Lavarropas" +'{' + "precio=" + precio + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso+'}';
-    }
-
     
-    
-   
-
     
     
     
