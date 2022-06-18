@@ -27,20 +27,21 @@ public class Ejercicio07_POO {
         for (int i = 0; i < 4; i++) {
             System.out.println("Persona numero "+(i+1));
             System.out.println("");
-            p1[i]= ps.crearPersona();
+//            p1[i]= ps.crearPersona();
+            p1[i]= null;
             
-            switch(ps.calcularMC(p1[i])){
-            
-                case -1:
-                    System.out.println("Persona"+(i+1)+": "+p1[i].getNombre()+" tiene bajo peso.");
-                    break;
-                case 0:
-                    System.out.println("Persona"+(i+1)+": "+p1[i].getNombre()+" tiene peso ideal.");
-                    break;
-                case 1:
-                    System.out.println("Persona"+(i+1)+": "+p1[i].getNombre()+" tiene sobre peso.");
-                    break;    
-            }
+//            switch(ps.calcularMC(p1[i])){
+//            
+//                case -1:
+//                    System.out.println("Persona"+(i+1)+": "+p1[i].getNombre()+" tiene bajo peso.");
+//                    break;
+//                case 0:
+//                    System.out.println("Persona"+(i+1)+": "+p1[i].getNombre()+" tiene peso ideal.");
+//                    break;
+//                case 1:
+//                    System.out.println("Persona"+(i+1)+": "+p1[i].getNombre()+" tiene sobre peso.");
+//                    break;    
+//            }
             
             if (18<p1[i].getEdad()){
             

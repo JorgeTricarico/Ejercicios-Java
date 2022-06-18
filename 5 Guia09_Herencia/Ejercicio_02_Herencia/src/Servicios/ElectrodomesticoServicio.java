@@ -6,9 +6,7 @@
 package Servicios;
 
 import Entidades.Electrodomestico;
-
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -57,9 +55,6 @@ public class ElectrodomesticoServicio {
         colores.add("azul");
         colores.add("gris");
         
-//        System.out.println("Ingrese el tipo de electrodomestico. Ej. TV, DVD, Lavarropas, ect.");
-//        String tipo = leer.next().toLowerCase();
-//        e1.setTipo(tipo);
         System.out.println("Ingrese el COLOR del electrodomestico: \n -Blanco \n -Negro \n -Rojo \n -Azul \n -Gris \n");
         String color = leer.next().toLowerCase();
         

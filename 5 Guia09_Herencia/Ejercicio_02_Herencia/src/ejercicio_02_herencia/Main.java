@@ -21,7 +21,7 @@ public class Main {
 
         ElectrodomesticoServicio se1 = new ElectrodomesticoServicio();
         LavarropaServicio LS1 = new LavarropaServicio();
-
+        
         
         LS1.crearLavarropa(se1);
         

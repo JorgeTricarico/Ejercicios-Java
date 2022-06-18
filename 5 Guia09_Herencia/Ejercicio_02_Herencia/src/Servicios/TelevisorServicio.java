@@ -29,10 +29,10 @@ public class TelevisorServicio extends ElectrodomesticoServicio{
         
         System.out.println("El televisor tiene sintonizador TDT? Responda SI o NO...");
         String isSintonizador= leer.next().toLowerCase();
-        boolean sintonizadorTDT;
+        boolean sintonizadorTDT=false;
         if (isSintonizador.equals("si")) {
             sintonizadorTDT = true;
-        
+        }
         
         Televisor t1 = new Televisor(pulgadas, sintonizadorTDT, e1.getPrecio(),e1.getColor(), e1.getConsumoElectrico(), e1.getPeso());
         
@@ -43,15 +43,20 @@ public class TelevisorServicio extends ElectrodomesticoServicio{
         s1.setListaElectrodomesticos(listaElectrodomesticos);
         
         return t1;
-    }
     
     
-    public void precioFinal(Electrodomestico e1, Televisor t1) {
+}
+    
+public void precioFinal(Electrodomestico e1, Televisor t1) {
         super.precioFinal(e1);
         if (t1.getPulgadas()>40) {
             t1.setPrecio(e1.getPrecio()*(1.3));
         }else {
             t1.setPrecio(e1.getPrecio());
         }
+        
+        if (t1.isSintonizadorTDT()) {
+            t1.setPrecio(e1.getPrecio()+500);
+    }
     }
 }
